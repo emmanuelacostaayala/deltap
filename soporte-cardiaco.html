@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte Cardíaco - Delta P SRL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F5F5F5;
+      color: #000;
+    }
+
+    .floating-card {
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .floating-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-img {
+      border-radius: 2rem;
+      max-width: 100%;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.6s ease, filter 0.6s ease;
+    }
+
+    .service-img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+
+    .diagonal-section {
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
+    }
+
+    .arrow-down {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-right: 4px solid #311e64;
+      border-bottom: 4px solid #311e64;
+      transform: rotate(45deg);
+      margin: 2rem auto 0;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: rotate(45deg) translateY(0);
+      }
+
+      40% {
+        transform: rotate(45deg) translateY(10px);
+      }
+
+      60% {
+        transform: rotate(45deg) translateY(5px);
+      }
+    }
+
+    .arrow-down:hover {
+      border-color: #8845a1;
+      cursor: pointer;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: #311e64;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background: #8845a1;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="back-btn" title="Volver al inicio">&#8592;</a>
+
+  <section class="relative bg-gradient-to-r from-white to-gray-100 py-20">
+    <div
+      class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-12">
+      <img src="images/equipos.avif" alt="Soporte Cardíaco" class="service-img lg:w-2/5 max-h-80" data-aos="fade-right">
+      <div class="lg:w-3/5 space-y-6" data-aos="fade-left">
+        <h1 class="text-4xl font-bold">Soporte Cardíaco</h1>
+        <p class="text-lg">Brindamos educación, manejo y asistencia en circulación extracorpórea, garantizando el
+          soporte vital del corazón y pulmon con equipos de alta tecnología.</p>
+        <a href="#benefits" id="scroll-arrow" class="arrow-down"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="py-24 diagonal-section bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div class="floating-card" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4">Circulación Extracorpórea</h2>
+        <p>Conducción profesional de la circulación extracorpórea en procedimientos de alta complejidad.</p>
+      </div>
+      <div class="floating-card" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-2xl font-bold mb-4">Protección Miocárdica</h2>
+        <p>Aplicación de técnicas avanzadas para el cuidado del músculo cardíaco durante la cirugía.</p>
+      </div>
+      <div class="floating-card" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="text-2xl font-bold mb-4">Manejo de Balón de contrapulsación.</h2>
+        <p>Experiencia en el uso y distribución de balón de contrapulsación intra-aórtico.</p>
+      </div>
+      <div class="floating-card" data-aos="fade-up" data-aos-delay="300">
+        <h2 class="text-2xl font-bold mb-4">Control de Coagulación</h2>
+        <p>Supervisión y manejo de la coagulación para mayor seguridad durante las cirugías cardíacas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">¿Quieres saber más?</h2>
+    <p class="mb-4 text-lg" data-aos="fade-up" data-aos-delay="100">Contáctanos y descubre cómo Delta P SRL garantiza
+      soporte cardíaco confiable y especializado en cada procedimiento.</p>
+    <p class="mb-8 text-lg font-semibold text-[#311e64]" data-aos="fade-up" data-aos-delay="200">Escríbenos a:
+      <a href="mailto:info@deltaperfusion.com"
+        class="underline hover:text-[#8845a1] transition">cardiovascular@deltaperfusion.com </a>
+    </p>
+    <a href="index.html"
+      class="btn-modern inline-block bg-[#311e64] text-white py-3 px-6 rounded-lg hover:bg-[#8845a1] transition duration-300"
+      data-aos="zoom-in" data-aos-delay="300">Volver a Inicio</a>
+  </section>
+
+  <script>
+    AOS.init({ duration: 1200, once: true });
+    document.getElementById("scroll-arrow").addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+
+</html>
